@@ -1,0 +1,43 @@
+﻿<Window x:Class="KamiKaihi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KamiKaihi"
+        mc:Ignorable="d"
+        Title="シャケをよけろ！" Height="282" Width="212" ResizeMode="NoResize" KeyDown="Window_KeyDown">
+    <Grid HorizontalAlignment="Left" Width="197" Height="260" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="当たり判定(px)" HorizontalAlignment="Left" Margin="15,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.026,-0.077" Height="26" Width="84"/>
+        <TextBox x:Name="txtRadius" HorizontalAlignment="Left" Height="26" Margin="132,10,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="50"/>
+        <Button x:Name="button" Content="処理開始&#xD;&#xA;（ESCで中断）" HorizontalAlignment="Left" Height="39" Margin="85,195,0,0" VerticalAlignment="Top" Width="97" Click="button_Click"/>
+        <TextBox x:Name="txtLeftUpperPixelX" HorizontalAlignment="Left" Height="26" Margin="132,52,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="txtLeftUpperPixelY" HorizontalAlignment="Left" Height="26" Margin="132,83,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="label_Copy" Content="キャプチャ座標" HorizontalAlignment="Left" Margin="15,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.026,-0.077" Height="26" Width="84"/>
+        <Label x:Name="label_Copy2" Content="X" HorizontalAlignment="Left" Margin="104,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.026,-0.077" Height="26" Width="28"/>
+        <Label x:Name="label_Copy3" Content="Y" HorizontalAlignment="Left" Margin="104,83,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.026,-0.077" Height="26" Width="28"/>
+        <Button x:Name="btnSetXYPos" Content="設定" HorizontalAlignment="Left" Height="26" Margin="31,83,0,0" VerticalAlignment="Top" Width="47" Click="buttonXY_Click"/>
+        <Label x:Name="label_Copy1" Content="マウス座標" HorizontalAlignment="Left" Margin="15,129,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.026,-0.077" Height="26" Width="84"/>
+        <Grid HorizontalAlignment="Left" Width="197" Height="250" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txtMousePosX" HorizontalAlignment="Left" Height="26" Margin="132,128,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50"/>
+            <TextBox x:Name="txtMousePosY" HorizontalAlignment="Left" Height="26" Margin="132,159,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="50"/>
+            <Label x:Name="label_Copy5" Content="X" HorizontalAlignment="Left" Margin="104,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.026,-0.077" Height="26" Width="28"/>
+            <Label x:Name="label_Copy6" Content="Y" HorizontalAlignment="Left" Margin="104,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.026,-0.077" Height="26" Width="28"/>
+            <CheckBox x:Name="chkAllSearch" Content="全探索切り替え" HorizontalAlignment="Left" Margin="19,32,0,0" VerticalAlignment="Top" IsChecked="True"/>
+
+        </Grid>
+        <Label x:Name="lblfps" Content="0 fps" HorizontalAlignment="Left" Margin="15,195,0,0" VerticalAlignment="Top" Width="54"/>
+
+    </Grid>
+</Window>
